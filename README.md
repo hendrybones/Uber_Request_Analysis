@@ -53,6 +53,7 @@ data.Status.value_counts()
 ```
 This will give us the sum of the rides which were completed , cancelled and no cars available , where we find out that we have many completed 
 rides as compared to the cancelled rides during that periods and also more no car available as compared to cancelled rides
+
 ![comletedR](https://user-images.githubusercontent.com/44755841/227680113-4140ab7a-3546-4ecc-b0e2-20377b313014.png)
 
 ### Rename columns
@@ -86,19 +87,15 @@ demand_vs_supply['Total Demand Per Day']/demand_vs_supply['Total No. of Drivers'
 The result is 4 however we expect each uber driver to have atleast 4 rides in a day according to the uber demand in that area
 ### Where did we had most pickup
 ```
-rint("Pickuo point:\n", newData.Pickup_point.value_counts())
+print("Pickuo point:\n", newData.Pickup_point.value_counts())
 ## percentage of camplete, cancelled and not not availble trips in each pick point
 print("Percantage as per drop: \n", round(newData.Pickup_point.value_counts()/newData.Pickup_point.size*100,1))
 newData.groupby(by=['Pickup_point'])['status'].value_counts(normalize=True).unstack('status').plot.bar(stacked=True);
 ```
 Most pick up occurred in the city which make a total of 52% and 48% was from the Airport. This show there  is high demand in the city as compared to the 
 airport.
-![compledPer](https://user-images.githubusercontent.com/44755841/227682364-7bd31244-eca3-4e89-9597-7289667fa291.png)
 
-
-
-
-
+![StatusPickup](https://user-images.githubusercontent.com/44755841/227682561-e131e5fb-a3b6-4ab3-915b-7a0b43e69cb8.png)
 
 
 
