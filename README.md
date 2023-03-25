@@ -125,12 +125,16 @@ newData.head()
 
 
 ### How many null values do we have in pick timestamp and drop timestamp
+```
 Request_timestamp_count_of_null_values = newData['Request_timestamp'].isnull().sum()
 Drop_timestamp_count_of_null_values = newData['Drop_timestamp'].isnull().sum()
 Driver_id_count_of_null_values = newData['Driver_id'].isnull().sum()
 print("Number of rows containing null values in Request timestamp:", Request_timestamp_count_of_null_values)
 print("Number of rows containing null values in Drop timestamp:", Drop_timestamp_count_of_null_values)
 print("Number of rows containing null values in Driver id:", Driver_id_count_of_null_values)
+
+```
+![nullTimestamp](https://user-images.githubusercontent.com/44755841/227685537-7c03e75f-aa98-43a2-a4ad-f7f023210cdb.png)
 
 
 
