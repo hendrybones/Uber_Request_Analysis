@@ -97,6 +97,18 @@ airport.
 
 ![StatusPickup](https://user-images.githubusercontent.com/44755841/227682561-e131e5fb-a3b6-4ab3-915b-7a0b43e69cb8.png)
 
+### For easy analysis we change our data format for our dataset this the pickup date and drop date
+```
+newData['Request_timestamp'] = pd.to_datetime(newData['Request_timestamp'],
+                                       errors='coerce')
+newData['Drop_timestamp'] = pd.to_datetime(newData['Drop_timestamp'],
+                                     errors='coerce')
+newData.head()
+```
+
+
+
+
 
 
 
