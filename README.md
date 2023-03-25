@@ -121,6 +121,8 @@ newData['day-night'] = pd.cut(x=newData['Request_time'],
                               labels = ['Morning','Afternoon','Evening','Night'])
 newData.head()
 ```
+![changingDayFor](https://user-images.githubusercontent.com/44755841/227683982-51df73d9-3c76-4fcc-bfdf-6d0ec9097442.png)
+
 
 
 
