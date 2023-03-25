@@ -84,6 +84,18 @@ requested in a day, This summary also gives us the number of completed and cance
 demand_vs_supply['Total Demand Per Day']/demand_vs_supply['Total No. of Drivers']
 ```
 The result is 4 however we expect each uber driver to have atleast 4 rides in a day according to the uber demand in that area
+### Where did we had most pickup
+```
+rint("Pickuo point:\n", newData.Pickup_point.value_counts())
+## percentage of camplete, cancelled and not not availble trips in each pick point
+print("Percantage as per drop: \n", round(newData.Pickup_point.value_counts()/newData.Pickup_point.size*100,1))
+newData.groupby(by=['Pickup_point'])['status'].value_counts(normalize=True).unstack('status').plot.bar(stacked=True);
+```
+Most pick up occurred in the city which make a total of 52% and 48% was from the Airport. This show there  is high demand in the city as compared to the 
+airport.
+![compledPer](https://user-images.githubusercontent.com/44755841/227682364-7bd31244-eca3-4e89-9597-7289667fa291.png)
+
+
 
 
 
