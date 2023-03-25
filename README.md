@@ -136,6 +136,14 @@ print("Number of rows containing null values in Driver id:", Driver_id_count_of_
 ```
 ![nullTimestamp](https://user-images.githubusercontent.com/44755841/227685537-7c03e75f-aa98-43a2-a4ad-f7f023210cdb.png)
 
+### Grouping data by Status (completed , cancelled and no cars available
+```
+newData.groupby(newData.status).count()
+```
+![groupStatus](https://user-images.githubusercontent.com/44755841/227686863-b0059996-3e21-404c-99fd-e9521cd8a601.png)
+
+
+
 
 
 
