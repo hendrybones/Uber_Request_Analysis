@@ -55,7 +55,18 @@ This will give us the sum of the rides which were completed , cancelled and no c
 rides as compared to the cancelled rides during that periods and also more no car available as compared to cancelled rides
 ![comletedR](https://user-images.githubusercontent.com/44755841/227680113-4140ab7a-3546-4ecc-b0e2-20377b313014.png)
 
-###
+### Rename columns
+Given that we are analyzing data which is stored in csv format will have to rename our columns to a convetion that is readable 
+by python script such as in camel case format
+```
+## first we rename columns in the data set
+newData=data.rename(columns={'Request id': 'Request_id', 'Driver id': 'Driver_id','Pickup point':'Pickup_point',
+                             'Request timestamp':'Request_timestamp','Drop timestamp':'Drop_timestamp','Status':'status'})
+newData.head()
+```
+![changeCoumns](https://user-images.githubusercontent.com/44755841/227681463-ec6b22e4-73ff-4054-b003-1e7ce4ecf960.png)
+
+
 
 
 
