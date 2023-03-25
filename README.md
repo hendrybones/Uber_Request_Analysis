@@ -51,8 +51,11 @@ data.info()
 ```
 data.Status.value_counts()
 ```
-OUTPUT
+This will give us the sum of the rides which were completed , cancelled and no cars available , where we find out that we have many completed 
+rides as compared to the cancelled rides during that periods and also more no car available as compared to cancelled rides
 ![comletedR](https://user-images.githubusercontent.com/44755841/227680113-4140ab7a-3546-4ecc-b0e2-20377b313014.png)
+
+###
 
 
 
