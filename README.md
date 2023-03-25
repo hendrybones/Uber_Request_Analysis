@@ -78,6 +78,13 @@ We arrive to this by counting the number of individual drivers id which is the u
 requested in a day, This summary also gives us the number of completed and cancelled trips in a day
 ![summay](https://user-images.githubusercontent.com/44755841/227681857-3342c899-ca4a-4557-8556-d8045b11fa04.png)
 
+### What is the avarege request for each driver in a day
+```
+# on average how many request each driver gets
+demand_vs_supply['Total Demand Per Day']/demand_vs_supply['Total No. of Drivers']
+```
+The result is 4 however we expect each uber driver to have atleast 4 rides in a day according to the uber demand in that area
+
 
 
 
