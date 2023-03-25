@@ -65,6 +65,18 @@ newData=data.rename(columns={'Request id': 'Request_id', 'Driver id': 'Driver_id
 newData.head()
 ```
 ![changeCoumns](https://user-images.githubusercontent.com/44755841/227681463-ec6b22e4-73ff-4054-b003-1e7ce4ecf960.png)
+### How many drivers were there in our data set and what are thier average rides
+```
+demand_vs_supply = pd.DataFrame({'Total No. of Drivers':[newData['Driver_id'].nunique()], 
+                                 'Total Demand Per Day':[newData['Request_id'].nunique()/5],
+                                 'Trip_Completed_Count_Per_Day':newData[(newData['status']=='Trip Completed')].shape[0]/5,
+                                 ' Trip_cancelled_count_per_day' :newData[newData['status']=='Cancelled'].shape[0]/5})
+                                 
+demand_vs_supply
+```
+We arrive to this by counting the number of individual drivers id which is the unique identifier , demand per day by calculating the number of trips 
+requested in a day, This summary also gives us the number of completed and cancelled trips in a day
+
 
 
 
