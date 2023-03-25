@@ -105,6 +105,23 @@ newData['Drop_timestamp'] = pd.to_datetime(newData['Drop_timestamp'],
                                      errors='coerce')
 newData.head()
 ```
+![changeDatafor](https://user-images.githubusercontent.com/44755841/227682831-07f1eda3-5db2-4a71-9ff2-7b5bb6df4e21.png)
+
+### Splitting the Reuest time to date and time column and then converting the time into four different categories i.e. Morning, Afternoon, Evening, Night
+```
+from datetime import datetime
+
+newData['Request_month'] = pd.DatetimeIndex(newData['Request_timestamp']).month
+newData['Request_date'] = pd.DatetimeIndex(newData['Request_timestamp']).date
+newData['Request_time'] = pd.DatetimeIndex(newData['Request_timestamp']).hour
+ 
+#changing into categories of day and night
+newData['day-night'] = pd.cut(x=newData['Request_time'],
+                              bins = [0,10,15,19,24],
+                              labels = ['Morning','Afternoon','Evening','Night'])
+newData.head()
+```
+
 
 
 
