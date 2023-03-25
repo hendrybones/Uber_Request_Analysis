@@ -42,5 +42,18 @@ print(data.head())
 print(data.isnull().sum())
 ```
 This will help us to clean our data by removing irrelavant fields in our data set
+## We check basic information in our data 
+It will help us to determine the number of columns and rows we have in our dataset and also describe their datatypes
+```
+data.info()
+```
+### We determine the number of rides which were commpleted , cancelled and no car available
+```
+data.Status.value_counts()
+```
+OUTPUT
+![comletedR](https://user-images.githubusercontent.com/44755841/227680113-4140ab7a-3546-4ecc-b0e2-20377b313014.png)
+
+
 
 
